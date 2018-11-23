@@ -1,0 +1,26 @@
+
+
+
+2:lambda 表达式
+
+https://www.cnblogs.com/xujanus/p/6133865.html
+
+例子 list to map
+https://www.cnblogs.com/yangweiqiang/p/6934671.html
+
+3：存在多行代码
+https://www.cnblogs.com/kangkaii/p/8419082.html
+
+测试01
+
+测试03
+
+测试05
+
+测试06
+
+测试09
+
+测试11
+
+测试13

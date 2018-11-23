@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datasource.dao.MyDataSourceMapper">
+
+
+
+
+    <sql id="Base_Column_List">
+        databasename, driverClassName, url,username,password
+    </sql>
+
+    <select id="findAllDataSources" resultType="com.datasource.pojo.MyDatasource">
+
+        SELECT
+
+        <include refid="Base_Column_List"/>
+        FROM datasource
+    </select>
+
+
+
+</mapper>

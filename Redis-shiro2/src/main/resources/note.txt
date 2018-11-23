@@ -1,0 +1,9 @@
+
+
+https://gitee.com/starrk110/shiroRedisSpringboot/blob/master/foreground/src/main/java/com/starrk/myblog/foreground/config/shiro/ShiroConfig.java
+
+
+
+2:
+
+https://www.cnblogs.com/caichaoqi/p/8900677.html

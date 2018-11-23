@@ -1,0 +1,13 @@
+
+
+http://www.cnblogs.com/zengkefu/p/5742617.html
+
+参考文章：
+
+1：https://blog.csdn.net/WI_232995/article/details/78124885
+
+2： https://blog.csdn.net/qq_37142346/article/details/78494992
+
+3: Spring-Boot + Atomikos 实现跨库的分布式事务管理
+
+https://blog.csdn.net/Appleyk/article/details/79581537

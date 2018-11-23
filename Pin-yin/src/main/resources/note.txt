@@ -1,0 +1,11 @@
+
+1: 使用PinYin4j实现汉字转拼音
+http://mouselearnjava.iteye.com/blog/2154545
+
+
+2:lambda 表达式
+
+https://www.cnblogs.com/xujanus/p/6133865.html
+
+例子 list to map
+https://www.cnblogs.com/yangweiqiang/p/6934671.html

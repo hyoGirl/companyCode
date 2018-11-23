@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mybatis.shiro.dao.UserDao">
+
+	
+	<resultMap type="com.mybatis.shiro.pojo.User" id="userMap">
+	
+			<id property="uid" column="uid"/>
+			<result property="username" column="username"/>
+			<result property="password" column="password"/>
+		<collection property="roles" ofType="com.mybatis.shiro.pojo.Role">
+			<id property="rid" column="rid"/>
+			<result property="rname" column="rname"/>
+			<collection property="modules" ofType="com.mybatis.shiro.pojo.Module">
+				<id property="mid" column="mid"></id>
+				<result property="mname" column="mname"/>
+			</collection>
+		</collection>
+	</resultMap>
+	
+
+	<sql id="Base_Column_List">
+		id, province_id, city_name, description
+	</sql>
+
+	<select id="findUserByUsername" resultMap="userMap" parameterType="String">
+		select
+			  u.*,
+			  r.*,
+			  m.*
+			from user u
+			  inner join user_role ur
+			    on u.uid = ur.rid
+			  inner join role r
+			    on ur.rid = r.rid
+			  inner join module_role mr
+			    on mr.rid = r.rid
+			  inner join module m
+			    on mr.mid = m.mid
+			where username=#{name}
+	</select>
+
+</mapper>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+
+    <style type="text/css">
+
+        div{
+            width: 400px;
+            margin: 150px auto;
+            text-align: center;
+            background: #E56515;
+        }
+
+        input{
+            margin: 10px 20px;
+            background: #ccc;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div>
+    <!--错误信息：<h4 th:text="${msg}"></h4>-->
+    <form th:action="@{/loginTest}" method="post">
+        <p>账号：<input type="text" name="username" value="admin"/></p>
+        <p>密码：<input type="text" name="password" value="123456"/></p>
+        <p><input type="submit" value="登录"/></p>
+    </form>
+</div>
+</body>
+</html>

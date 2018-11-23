@@ -1,0 +1,17 @@
+rongzi:
+  ds:
+    SUZHOU:
+      driver: driver1
+      url: http://server1.com
+      username: server1
+      password: abc
+    SHANGHAI:
+      driver: driver2
+      url: http://server2.com
+      username: server2
+      password: bcd
+    BEIJING:
+      driver: driver3
+      url: http://server3.com
+      username: server3
+      password: efg

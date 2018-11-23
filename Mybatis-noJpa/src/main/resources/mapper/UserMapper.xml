@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.log.dao.UserDao">
+
+
+
+
+<!--
+    <insert id="addProduct" parameterType="com.rongzi.demo.modules.apm.model.Product">
+
+        INSERT INTO  [DFSS_LOG].[dbo].[Product]
+        (
+          Name, Count, Description, ProductionDate, ExpireDate
+        )
+        VALUES
+        (
+          #{name},#{count},#{description},#{productionDate},#{expireDate}
+        )
+    </insert>
+-->
+
+
+    <sql id="Base_Column_List">
+        id, user_name AS userName, password,age
+    </sql>
+
+    <select id="findAllUser" resultType="com.mybatis.log.pojo.User">
+
+        SELECT
+
+        <include refid="Base_Column_List"/>
+        FROM USER
+    </select>
+
+
+    <select id="findUserById" resultType="User">
+        SELECT  * FROM USER  where id=#{id}
+    </select>
+
+
+    <insert id="addUser" parameterType="com.mybatis.log.pojo.User">
+
+        INSERT  INTO  USER(id,user_name,password,age)
+
+        VALUES ( #{id},#{userName},#{password},#{age})
+
+    </insert>
+
+
+
+    <update id="updateUser" parameterType="com.mybatis.log.pojo.User">
+
+        UPDATE USER
+
+        <set>
+
+            <if test="userName!=null and userName !=''"> user_name=#{userName},</if>
+            <if test="password!=null and password !=''"> password=#{password},</if>
+            <if test="age!=null and age !=''"> age=#{age},</if>
+
+        </set>
+
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteUserById" parameterType="com.mybatis.log.pojo.User">
+
+        DELETE  FROM  USER  WHERE  id=#{id}
+    </delete>
+
+
+</mapper>

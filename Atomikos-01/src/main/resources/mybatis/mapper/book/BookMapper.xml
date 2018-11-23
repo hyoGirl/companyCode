@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atomikos.app.dao.book.MasterMapper">
+
+
+
+
+
+    <sql id="Base_Column_List">
+        id AS b_id, name AS b_name
+    </sql>
+
+
+
+
+
+    <insert id="addBook" parameterType="com.atomikos.app.pojo.Book">
+
+        INSERT  INTO  book(b_id,b_name)
+
+        VALUES ( #{id},#{name})
+
+    </insert>
+
+
+    <delete id="deleteBookById" parameterType="com.atomikos.app.pojo.Book">
+
+        DELETE  FROM  book  WHERE  b_id=#{id}
+    </delete>
+
+
+</mapper>

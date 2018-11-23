@@ -1,0 +1,14 @@
+
+
+https://gitee.com/starrk110/shiroRedisSpringboot/blob/master/foreground/src/main/java/com/starrk/myblog/foreground/config/shiro/ShiroConfig.java
+
+
+
+2:
+
+https://www.cnblogs.com/caichaoqi/p/8900677.html
+
+
+3:
+
+https://blog.csdn.net/qq_34021712/article/category/8000629

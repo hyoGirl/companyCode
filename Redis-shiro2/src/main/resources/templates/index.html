@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org"
+          xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"  
+          xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">  
+<head>
+    <meta charset="UTF-8"/>
+    <title>index</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body>
+
+<p />
+<!-- <h1 th:text="${user.username} " /> -->
+<h1 th:text="'欢迎光临：' + ${use.username} + '!' +'请选择你的操作'"></h1>
+<div class="form-group">
+
+
+<!--     <div class="col-sm-2 control-label">
+        <a th:href="@{/userInfo/userList}" class="btn btn-info">用户查询</a>
+        <a th:href="@{/userInfo/userAdd}" class="btn btn-info">用户添加</a>
+        <a th:href="@{/userInfo/userDel}" class="btn btn-info">用户删除</a>
+    </div> -->
+    
+     <p shiro:hasRole="admin">  
+           <a>管理员角色</a>  
+      </p>  
+    
+    <ul>
+    
+  <!--   	<li shiro:hasPermission ="SearchFile">
+        <a href="fileanager.html" th:href="@{/test/adminUser/fileManager}"> 
+        <i class="icon-bar-chart"></i><span class="hidden-tablet"> 文件管理</span>
+        </a>
+      </li> -->
+     <!--  shiro:hasPermission="userInfo:query" -->
+     
+     
+     
+       <li shiro:hasPermission ="add">
+      	增加
+      </li>
+      <li shiro:hasPermission ="delete">
+      	删除
+      </li>
+      <li shiro:hasPermission ="update">
+      	修改
+      </li>
+      <li shiro:hasPermission ="query">
+      	查询
+      </li> 
+      
+    </ul>
+        <a th:href="@{/logout}">点我注销</a>
+</div>
+</body>
+</html>
