@@ -1,4 +1,4 @@
-
+﻿
 
 1：redis命令
 https://blog.csdn.net/plei_yue/article/details/79362372
@@ -35,7 +35,7 @@ http://redisdoc.com/sorted_set/zrangebylex.html
 1：文章
 
 https://blog.csdn.net/GG_and_DD/article/details/79661846
-
+https://www.cnblogs.com/longtaosoft/p/6627568.html
 
 2：DEMO
 
