@@ -51,6 +51,7 @@
         <module>Redis-shiro2</module>
         <module>Redis-shiro3</module>
         <module>Buiness-Log</module>
+        <module>Jenkisn-Demo</module>
     </modules>
 
 
